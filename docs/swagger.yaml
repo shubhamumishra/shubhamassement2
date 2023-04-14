@@ -1,0 +1,48 @@
+info:
+  contact: {}
+paths:
+  /api/v1/cancelOrder:
+    post:
+      consumes:
+      - application/json
+      description: Cancel an order
+      parameters:
+      - description: orderId
+        in: query
+        name: orderId
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "404":
+          description: Not Found
+        "501":
+          description: Internal Server Error
+      summary: Cancel an order
+      tags:
+      - Order service
+  /api/v1/placeOrder:
+    post:
+      consumes:
+      - application/json
+      description: Place an order
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: object
+        "404":
+          description: Not Found
+        "501":
+          description: Internal Server Error
+      summary: Place order
+      tags:
+      - Order service
+swagger: "2.0"

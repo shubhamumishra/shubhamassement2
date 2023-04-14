@@ -1,0 +1,24 @@
+#API configurations
+application:
+  name: seller API Server
+  doc: http://localhost:8080
+
+# Server configurations
+server:
+  port: :8080
+
+logging:
+  level: DEBUG
+env:
+  level: Development
+
+mysql:
+  user: "<DB-USERNME>"
+  password: "<DB_PASSWORD>"
+  port: "3306"
+  host: "localhost"
+  dbname: "<DB_NAME>"
+
+swagger:
+  url: http://localhost:8080/swagger-ui/index.html#/
+  method: http
